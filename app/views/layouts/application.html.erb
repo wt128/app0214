@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App0210</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'layouts/default'%>
+    <!--this shows, if you access '/static/home'. these html insert this yield parameter -->
+   <%= yield :using_js %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'layouts/header' %>
+
+  <div class="container">
+      <div class="container">
+        <%= yield %>
+      </div> 
+      <%= render 'layouts/footer' %>
   </body>
+  
 </html>
