@@ -1,0 +1,11 @@
+<% provide(:title, "index") %>
+
+<h1> ALL USERs </h1>
+<p> ここで一覧を表示させる画面</p>
+
+<%= will_paginate %>
+<ul class="users" >
+       <%= render @user %>
+</ul>
+<p>will_...はじどうてきに@userを検出して、そこからページにアクセスするためのリンクを作成 </p>
+<%= will_paginate %>  

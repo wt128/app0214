@@ -1,4 +1,5 @@
 module UsersHelper
+    #渡されたユーザーのgravatar画像を返す
     def gravatar_for(user,options = {size: 80}) #options = {size: 80}
         #if !!user.email
         #    user.email = user.email.downcase
